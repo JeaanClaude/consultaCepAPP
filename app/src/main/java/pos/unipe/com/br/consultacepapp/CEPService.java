@@ -2,6 +2,7 @@ package pos.unipe.com.br.consultacepapp;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 /**
@@ -12,4 +13,7 @@ public interface CEPService {
 
     @GET("ws/{cep}/json")
     Call<CEP> buscarCEP(@Path("cep") String cep);
+
+    @POST("ws/{cep}/json")
+    Call<CEP> cadastrarCEP(@Path("cep") CEP cep);
 }

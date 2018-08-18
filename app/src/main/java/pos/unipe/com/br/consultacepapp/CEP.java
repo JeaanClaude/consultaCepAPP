@@ -6,15 +6,18 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  * Created by aalve on 18/07/2018.
  */
 
-@JsonIgnoreProperties({"codibge", "codestado"})
+//@JsonIgnoreProperties({"codibge", "codestado"})
 public class CEP {
 
-    private String cep;
+       private String cep;
     private String logradouro;
     private String complemento;
     private String bairro;
-    private String cidade;
-    private String estado;
+    private String localidade;
+    private String uf;
+    private String unidade;
+    private String ibge;
+    private String gia;
 
     public String getCep() {
         return cep;
@@ -48,29 +51,58 @@ public class CEP {
         this.bairro = bairro;
     }
 
-    public String getCidade() {
-        return cidade;
+    public String getLocalidade() {
+        return localidade;
     }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public void setLocalidade(String localidade) {
+        this.localidade = localidade;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getUf() {
+        return uf;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setUf(String uf) {
+        this.uf = uf;
+    }
+
+    public String getUnidade() {
+        return unidade;
+    }
+
+    public void setUnidade(String unidade) {
+        this.unidade = unidade;
+    }
+
+    public String getIbge() {
+        return ibge;
+    }
+
+    public void setIbge(String ibge) {
+        this.ibge = ibge;
+    }
+
+    public String getGia() {
+        return gia;
+    }
+
+    public void setGia(String gia) {
+        this.gia = gia;
     }
 
     @Override
     public String toString() {
-        return "CEP: " + getCep()
-                + "\nLogradouro: " + getLogradouro()
-                + "\nComplemento: " + getComplemento()
-                + "\nBairro: " + getBairro()
-                + "\nCidade:" + getCidade()
-                + "\nEstado: " + getEstado();
+        return "CEP{" +
+                "cep='" + cep + '\'' +
+                ", logradouro='" + logradouro + '\'' +
+                ", complemento='" + complemento + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", localidade='" + localidade + '\'' +
+                ", uf='" + uf + '\'' +
+                ", unidade='" + unidade + '\'' +
+                ", ibge='" + ibge + '\'' +
+                ", gia='" + gia + '\'' +
+                '}';
     }
 }
